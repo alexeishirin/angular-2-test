@@ -1,4 +1,4 @@
-import {TimeLog} from './model/TimeLog';
+import {TimeLog} from './model/timelog.model';
 export var TIME_LOGS: TimeLog[] = [
     {"id": 1, "description": "Installing Node JS", "timeInMinutes": 5},
     {"id": 2, "description": "Setting up project", "timeInMinutes": 20},

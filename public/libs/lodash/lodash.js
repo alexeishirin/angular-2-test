@@ -1,3 +1,4 @@
+(function(System, SystemJS) {
 /**
  * @license
  * lodash 4.11.1 (Custom Build) <https://lodash.com/>
@@ -16025,3 +16026,4 @@
     root._ = _;
   }
 }.call(this));
+})(System, System);

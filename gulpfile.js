@@ -1,17 +1,26 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+var concat = require("gulp-concat");
+var inject = require('gulp-inject');
 var ts = require('gulp-typescript');
 var nodemon = require('gulp-nodemon');
 var browserSync = require('browser-sync');
-var reload  = browserSync.reload;
-var pluginAutoprefix = require('less-plugin-autoprefix');
-var less = require('gulp-less');
+var reload = browserSync.reload;
 var notify = require("gulp-notify");
-var cssmin = require("gulp-cssmin");
 var sourcemaps = require('gulp-sourcemaps');
+var tslint = require('gulp-tslint');
+var uglify = require('gulp-uglify');
+var series = require('stream-series');
 
 var BROWSER_SYNC_RELOAD_DELAY = 500;
 
-const autoprefix = new pluginAutoprefix({ browsers: ["iOS >= 7", "Chrome >= 30", "Explorer >= 9", "last 2 Edge versions", "Firefox >= 20"] });
+gulp.task('default', ['buildServer', 'inject-js', 'styles', 'browser-sync'], function () {
+    gulp.watch('**/*.ts', ['buildServer', 'inject-js', browserSync.reload]);
+    gulp.watch('./public/**/*.scss', ['styles']);
+    gulp.watch('./public/**/*.html', ['bs-reload']);
+});
 
 gulp.task('buildServer', function () {
     var tsProject = ts.createProject("./server/tsconfig.json");
@@ -21,9 +30,18 @@ gulp.task('buildServer', function () {
         .pipe(gulp.dest('./server'))
 });
 
-gulp.task('build-app', function(){
+gulp.task('tslint', function () {
+    return gulp.src('./public/**/*.ts')
+        .pipe(tslint({
+            // contains rules in the tslint.json format
+            configuration: "./tslint.json"
+        }))
+        .pipe(tslint.report("verbose"));
+});
+
+gulp.task('build-app', function () {
     var tsProject = ts.createProject('./public/tsconfig.json');
-    var tsResult = gulp.src('./public/**/*.ts')
+    var tsResult = gulp.src('./public/app/**/*.ts')
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject));
     return tsResult.js
@@ -31,35 +49,46 @@ gulp.task('build-app', function(){
         .pipe(gulp.dest('./public'))
 });
 
-gulp.task('watch', function() {
-    gulp.watch('./server/**/*.ts', ['buildServer']);
-});
-gulp.task('start', function () {
-    nodemon({
-        script: './server/server.js'
-        , ext: 'ts html css'
-        , tasks: ['buildServer']
-    })
+gulp.task('bundle-app', ['build-app'], function () {
+    return gulp.src('./public/app/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(concat('app.js'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/dist/js'));
 });
 
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
 
-gulp.task('styles', function () {
-    return gulp.src('./public/less/**/*.less')
-        .pipe(less({
-            plugins: [autoprefix]
-        }))
-        .on("error", notify.onError({
-            message: 'LESS compile error: <%= error.message %>'
-        }))
-        .pipe(cssmin())
-        .pipe(gulp.dest('./public/css'))
-        .pipe(browserSync.reload({ stream: true }));
+gulp.task('sass', function () {
+    return gulp
+        .src('./sass/**/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/css'));
+
 });
 
-gulp.task('browser-sync', ['nodemon'], function() {
+gulp.task('styles', ['sass'], function () {
+    var cssStream = gulp
+        .src('./public/css/**/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(cleanCSS())
+        .pipe(concat('style.min.css'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/dist/css'));
+
+    return gulp.src("./public/dist/app.html")
+        .pipe(inject(cssStream, {relative: true}))
+        .pipe(gulp.dest('./public/dist'))
+        .pipe(browserSync.reload({stream: true}));
+});
+
+gulp.task('browser-sync', ['nodemon'], function () {
     browserSync({
         proxy: "localhost:8080",  // local node app address
         port: 5000,  // use *different* port than above
@@ -74,7 +103,9 @@ gulp.task('nodemon', function (cb) {
     })
         .on('start', function onStart() {
             // ensure start only got called once
-            if (!called) { cb(); }
+            if (!called) {
+                cb();
+            }
             called = true;
         })
         .on('restart', function onRestart() {
@@ -87,8 +118,31 @@ gulp.task('nodemon', function (cb) {
         });
 });
 
-gulp.task('default', ['buildServer', 'build-app', 'styles', 'browser-sync'], function () {
-    gulp.watch('**/*.ts',   ['buildServer', 'build-app', browserSync.reload]);
-    gulp.watch('./public/**/*.less',  ['styles']);
-    gulp.watch('./public/**/*.html', ['bs-reload']);
+gulp.task('bundle-vendor', function () {
+    return gulp.src([
+            './public/libs/build/angular2-polyfills.min.js',
+            './public/libs/build/system.js',
+            './public/libs/build/Rx.min.js',
+            './public/libs/build/angular2.min.js',
+            './public/libs/build/http.min.js',
+            './public/libs/build/router.min.js'
+        ])
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('./public/dist/js'));
+});
+
+gulp.task('uglify-app', function () {
+    return gulp.src('./public/dist/js/app.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('./public/dist/minimized'));
+});
+
+gulp.task('inject-js', ['build-app', 'bundle-vendor'], function () {
+    var vendorStream = gulp.src(['./public/dist/js/vendor.js'], {read: false});
+
+    var appStream = gulp.src(['./public/dist/js/app.js'], {read: false});
+
+    return gulp.src("./public/dist/app.html")
+        .pipe(inject(series(vendorStream, appStream), {relative: true}))
+        .pipe(gulp.dest('./public/dist'));
 });

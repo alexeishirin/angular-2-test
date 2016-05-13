@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4fad235e-9bd3-478c-9f2e-a9aaff3ff09f" name="Default" comment="" />
+    <list default="true" id="4fad235e-9bd3-478c-9f2e-a9aaff3ff09f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/dist/libs/lodash.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sass/style.scss" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/bootstrap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/app/AppComponent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/app/AppComponent.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/timeLogs/TimeLogsComponent.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/components/timeLogs/TimeLogsComponent.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/mock-time-logs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/model/TimeLog.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/model/TimeLog.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/services/time-logs.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/app/services/time-logs.service.ts" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/less/style.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/libs/angular2/platform/common.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/bootstrap.ts" afterPath="$PROJECT_DIR$/public/app/bootstrap.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/app/mock-time-logs.ts" afterPath="$PROJECT_DIR$/public/app/mock-time-logs.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.css.map" afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/libs/lodash/lodash.js" afterPath="$PROJECT_DIR$/public/libs/lodash/lodash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/tsconfig.json" afterPath="$PROJECT_DIR$/public/tsconfig.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.ts" afterPath="$PROJECT_DIR$/server/server.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/tsconfig.json" afterPath="$PROJECT_DIR$/server/tsconfig.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/app.html" />
+    </list>
     <ignored path="angular-2-test.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,15 +56,25 @@
       <file leaf-file-name="server.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/server.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+            <state relative-caret-position="-68">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ng2-table.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/ng2-table/ng2-table.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timelog.model.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/model/timelog.model.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -41,50 +83,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ng2-bootstrap.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/libs/ng2-bootstrap/ng2-bootstrap.js">
+      <file leaf-file-name="timelogs.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/services/timelogs.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="4887" column="50" selection-start-line="4887" selection-start-column="50" selection-end-line="4887" selection-end-column="50" />
+            <state relative-caret-position="17">
+              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding>
-                <marker date="1461843998987" expanded="true" signature="37180:37194" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="37516:37536" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="42522:42537" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="43596:43611" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="48521:48532" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="50963:50978" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="51474:51489" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="53854:53865" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="68543:68558" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="69075:69090" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="71642:71653" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="113377:113390" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="146067:146078" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="146404:146415" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="186547:186561" placeholder="..." />
-                <marker date="1461843998987" expanded="true" signature="187069:187083" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppComponent.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/app/AppComponent.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-                <marker date="1461844183229" expanded="true" signature="550:1369" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="705:893" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="973:1358" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1023:1217" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1254:1345" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1399:1876" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1421:1869" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1469:1721" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1508:1706" placeholder="..." />
-                <marker date="1461844183229" expanded="true" signature="1799:1858" placeholder="..." />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,77 +98,67 @@
       <file leaf-file-name="mock-time-logs.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/mock-time-logs.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimeLog.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/model/TimeLog.ts">
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeLogsComponent.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/TimeLogsComponent.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#62#0" expanded="true" />
-                <marker date="1461846357588" expanded="true" signature="376:422" placeholder="..." />
-                <marker date="1461846357588" expanded="true" signature="448:1107" placeholder="..." />
-                <marker date="1461846357588" expanded="true" signature="507:1092" placeholder="..." />
-                <marker date="1461846357588" expanded="true" signature="524:683" placeholder="..." />
-                <marker date="1461846357588" expanded="true" signature="730:1075" placeholder="..." />
-                <marker date="1461846357588" expanded="true" signature="1133:1277" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="time-logs.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/services/time-logs.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddTimeLogComponent.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="10" column="56" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="56" />
+            <state relative-caret-position="340">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
-                <marker date="1461843770804" expanded="true" signature="331:1219" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="372:653" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="509:634" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="694:974" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="827:955" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="1015:1203" placeholder="..." />
-                <marker date="1461843770804" expanded="true" signature="1071:1184" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="636:1521" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="791:979" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1059:1510" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1109:1369" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1406:1497" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1551:2049" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1573:2042" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1621:1873" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1660:1858" placeholder="..." />
+                <marker date="1462197945849" expanded="true" signature="1972:2031" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timelogs.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/timelogs.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+                <marker date="1462197945821" expanded="true" signature="395:441" placeholder="..." />
+                <marker date="1462197945821" expanded="true" signature="467:1131" placeholder="..." />
+                <marker date="1462197945821" expanded="true" signature="526:1116" placeholder="..." />
+                <marker date="1462197945821" expanded="true" signature="543:702" placeholder="..." />
+                <marker date="1462197945821" expanded="true" signature="754:1099" placeholder="..." />
+                <marker date="1462197945821" expanded="true" signature="1157:1299" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit-timelog.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#48#0" expanded="true" />
+                <marker date="1463139756861" expanded="true" signature="328:1033" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="361:584" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="464:573" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="617:836" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="713:825" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="869:1025" placeholder="..." />
+                <marker date="1463139756861" expanded="true" signature="917:1014" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -175,10 +170,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Less File" />
         <option value="tsconfig.json" />
+        <option value="HTML File" />
         <option value="TypeScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -189,15 +185,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/public/style.less" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/public/app/components/about/about.ts" />
         <option value="$PROJECT_DIR$/public/app/app.ts" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/public/tsconfig.json" />
-        <option value="$PROJECT_DIR$/server/tsconfig.json" />
         <option value="$PROJECT_DIR$/public/typings/tsd.d.ts" />
-        <option value="$PROJECT_DIR$/public/app/bootstrap.ts" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/public/less/style.less" />
         <option value="$PROJECT_DIR$/public/app/components/home/HomeComponent.ts" />
         <option value="$PROJECT_DIR$/public/app/components/about/AboutComponent.ts" />
@@ -205,15 +195,44 @@
         <option value="$PROJECT_DIR$/public/app/components/about/TimeLogsComponent.ts" />
         <option value="$PROJECT_DIR$/public/app/components/about/AddTimeLogComponent.ts" />
         <option value="$PROJECT_DIR$/public/app/model/TimeLog.ts" />
-        <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/server/server.ts" />
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/public/app/services/time-logs.service.ts" />
-        <option value="$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.ts" />
         <option value="$PROJECT_DIR$/public/libs/ng2-bootstrap/ng2-bootstrap.js" />
-        <option value="$PROJECT_DIR$/public/app/components/app/AppComponent.ts" />
         <option value="$PROJECT_DIR$/public/app/mock-time-logs.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.ts" />
         <option value="$PROJECT_DIR$/public/app/components/timeLogs/TimeLogsComponent.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/app/AppComponent.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/EditTimeLogComponent.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/EditTimeLogComponent.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/editTimeLogComponent.html" />
+        <option value="$PROJECT_DIR$/public/app/components/newone.ts" />
+        <option value="$PROJECT_DIR$/public/app/services/time-logs.service.ts" />
+        <option value="$PROJECT_DIR$/tslint.json" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/edit/EditTimeLogComponent.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/timelogs.component.ts" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.js" />
+        <option value="$PROJECT_DIR$/public/tsd.tsdrc.ts" />
+        <option value="$PROJECT_DIR$/public/.tsdrc" />
+        <option value="$PROJECT_DIR$/public/app/services/timelogs.service.ts" />
+        <option value="$PROJECT_DIR$/public/libs/build/Rx.min.js" />
+        <option value="$PROJECT_DIR$/public/libs/build/vendor.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/sass/style.scss" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/server/server.ts" />
+        <option value="$PROJECT_DIR$/public/app.html" />
+        <option value="$PROJECT_DIR$/public/libs/lodash/lodash.js" />
+        <option value="$PROJECT_DIR$/public/libs/lodash/lodash.min.js" />
+        <option value="$PROJECT_DIR$/server/tsconfig.json" />
+        <option value="$PROJECT_DIR$/public/app/bootstrap.ts" />
+        <option value="$PROJECT_DIR$/public/libs/build/lodash.min.js" />
+        <option value="$PROJECT_DIR$/public/tsconfig.json" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/public/dist/app.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.html" />
+        <option value="$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.ts" />
       </list>
     </option>
   </component>
@@ -253,7 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,6 +314,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -314,7 +346,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,59 +364,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rxjs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bundles" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-2-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-2-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ng2-bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-2-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular-2-test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lodash" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,8 +434,61 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="timeLogs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-2-test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -461,22 +498,26 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="list.type.of.created.stylesheet" value="Less" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="js-jscs-nodeInterpreter" value="D:\tools\nodejs\node.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rollio" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/git/angular-2-test/public/app/components/timeLogs/editTimeLogComponent.html" />
+    <property name="typescript-compiler-editor-notification" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\git\angular-2-test\public\app\components" />
-      <recent name="D:\git\angular-2-test\public\app\components\app" />
-      <recent name="D:\git\angular-2-test\public\app\components\about" />
-      <recent name="D:\git\angular-2-test\public\less" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\git\angular-2-test\public\libs\ng2-bootstrap" />
-      <recent name="D:\git\angular-2-test\public\libs\ng2-table" />
-      <recent name="D:\git\angular-2-test\public\css" />
-      <recent name="D:\git\angular-2-test\public\libs\moment" />
+      <recent name="D:\git\angular-2-test\public\libs\build" />
       <recent name="D:\git\angular-2-test\public\libs\lodash" />
+      <recent name="D:\git\angular-2-test\public\css" />
+      <recent name="D:\git\angular-2-test\public\libs\angular2\bundles" />
+      <recent name="D:\git\angular-2-test\public\libs\ng2-bootstrap" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\git\angular-2-test\public\dist\libs" />
+      <recent name="D:\git\angular-2-test\public\app\components\timeLogs" />
+      <recent name="D:\git\angular-2-test\public\app\components" />
+      <recent name="D:\git\angular-2-test\public\html" />
+      <recent name="D:\git\angular-2-test\public\app\components\timeLogs\edit" />
     </key>
   </component>
   <component name="RunManager">
@@ -551,25 +592,39 @@
       <workItem from="1461743298404" duration="11383000" />
       <workItem from="1461755545460" duration="2336000" />
       <workItem from="1461760069058" duration="9445000" />
-      <workItem from="1461828043832" duration="17759000" />
+      <workItem from="1461828043832" duration="21605000" />
+      <workItem from="1461915349284" duration="6227000" />
+      <workItem from="1461929590706" duration="1145000" />
+      <workItem from="1462174175134" duration="5578000" />
+      <workItem from="1462180397891" duration="11607000" />
+      <workItem from="1462196217486" duration="5655000" />
+      <workItem from="1462261410578" duration="16146000" />
+      <workItem from="1462352182987" duration="1049000" />
+      <workItem from="1462356641464" duration="369000" />
+      <workItem from="1462357602938" duration="1093000" />
+      <workItem from="1462358722734" duration="763000" />
+      <workItem from="1462370296631" duration="792000" />
+      <workItem from="1462456109244" duration="439000" />
+      <workItem from="1462959037676" duration="32000" />
+      <workItem from="1463127484855" duration="12174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45682000" />
+    <option name="totallyTimeSpent" value="112597000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32946146" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -596,7 +651,110 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/libs/angular2/bundles/angular2-polyfills.js">
+    <entry file="file://$PROJECT_DIR$/public/dist/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4335">
+          <caret line="25" column="98" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/minimized/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/build/vendor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85542">
+          <caret line="46" column="3" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-theme.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73372">
+          <caret line="4316" column="1" selection-start-line="4311" selection-start-column="0" selection-end-line="4316" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/build/http.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.tsdrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="52" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/less/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="104" column="1" selection-start-line="104" selection-start-column="1" selection-end-line="104" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -604,7 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/systemjs/dist/system.src.js">
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -612,14 +773,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2/bundles/angular2.dev.js">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="710" selection-start-line="0" selection-start-column="710" selection-end-line="0" selection-end-column="710" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/angular2/bundles/router.dev.js">
+    <entry file="file://$PROJECT_DIR$/public/dist/css/style.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -627,76 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/angular2/platform/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="76" selection-start-line="9" selection-start-column="76" selection-end-line="9" selection-end-column="76" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular2/bundles/testing.dev.js.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tsd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/typings/tsd.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typings/angularjs/angular.d.ts" />
-    <entry file="file://$PROJECT_DIR$/public/typings/tsd.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tsd.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/home/HomeComponent.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/angular2/typings/browser.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/typings/lodash/lodash.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="8483" column="20" selection-start-line="8483" selection-start-column="20" selection-end-line="8483" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/rxjs/bundles/Rx.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3111">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/moment/moment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -712,89 +808,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-bootstrap/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-bootstrap/components/ng2-bootstrap-config.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-bootstrap/ng2-bootstrap.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/bootstrap.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/ng2-bootstrap/components/tabs/title.md" />
-    <entry file="file://$PROJECT_DIR$/public/libs/ng2-bootstrap/components/accordion.js" />
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-bootstrap/ng2-bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/node_modules/lodash/lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -802,23 +816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="867" selection-start-line="0" selection-start-column="867" selection-end-line="0" selection-end-column="867" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/less/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/app/AppComponent.js">
+    <entry file="file://$PROJECT_DIR$/public/libs/build/router.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -826,39 +824,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/app/AppComponent.js">
+    <entry file="file://$PROJECT_DIR$/public/libs/lodash/lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-table/ng2-table.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-table/ng2-table.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="505">
+          <caret line="125" column="19" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/libs/lodash/lodash.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/ng2-table/ng2-table.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/libs/build/angular2.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -866,31 +856,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/dist/libs/lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        <state relative-caret-position="505">
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
+    <entry file="file://$PROJECT_DIR$/public/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="62" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock-time-logs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/app/app.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/js/vendor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="85" selection-start-line="0" selection-start-column="83" selection-end-line="0" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/bootstrap.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#75#129#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="48" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dist/app.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/server.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+        <state relative-caret-position="-68">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-table/ng2-table.js">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/model/timelog.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -898,7 +980,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/ng2-bootstrap/bundles/ng2-bootstrap.js.map.gz">
+    <entry file="file://$PROJECT_DIR$/public/app/model/TimeLog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -906,7 +988,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/ng2-bootstrap/ng2-bootstrap.js.map">
+    <entry file="file://$PROJECT_DIR$/public/app/model/timelog.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -914,114 +996,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/ng2-bootstrap/ng2-bootstrap.js">
+    <entry file="file://$PROJECT_DIR$/public/app/services/time-logs.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="4887" column="50" selection-start-line="4887" selection-start-column="50" selection-end-line="4887" selection-end-column="50" />
-          <folding>
-            <marker date="1461843998987" expanded="true" signature="37180:37194" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="37516:37536" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="42522:42537" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="43596:43611" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="48521:48532" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="50963:50978" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="51474:51489" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="53854:53865" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="68543:68558" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="69075:69090" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="71642:71653" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="113377:113390" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="146067:146078" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="146404:146415" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="186547:186561" placeholder="..." />
-            <marker date="1461843998987" expanded="true" signature="187069:187083" placeholder="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/AddTimeLogComponent.ts">
+    <entry file="file://$PROJECT_DIR$/public/app/services/timelogs.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="10" column="56" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <marker date="1461843770804" expanded="true" signature="331:1219" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="372:653" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="509:634" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="694:974" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="827:955" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="1015:1203" placeholder="..." />
-            <marker date="1461843770804" expanded="true" signature="1071:1184" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/services/time-logs.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/app/AppComponent.ts">
+    <entry file="file://$PROJECT_DIR$/public/app/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="55" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <marker date="1461844183229" expanded="true" signature="550:1369" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="705:893" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="973:1358" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1023:1217" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1254:1345" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1399:1876" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1421:1869" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1469:1721" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1508:1706" placeholder="..." />
-            <marker date="1461844183229" expanded="true" signature="1799:1858" placeholder="..." />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/mock-time-logs.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="85" selection-start-line="18" selection-start-column="85" selection-end-line="18" selection-end-column="85" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="89" column="50" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/model/TimeLog.ts">
+    <entry file="file://$PROJECT_DIR$/public/app/components/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="17" />
+        <state relative-caret-position="340">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+            <marker date="1462197945849" expanded="true" signature="636:1521" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="791:979" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1059:1510" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1109:1369" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1406:1497" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1551:2049" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1573:2042" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1621:1873" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1660:1858" placeholder="..." />
+            <marker date="1462197945849" expanded="true" signature="1972:2031" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/TimeLogsComponent.ts">
+    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/timelogs.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
-            <marker date="1461846357588" expanded="true" signature="376:422" placeholder="..." />
-            <marker date="1461846357588" expanded="true" signature="448:1107" placeholder="..." />
-            <marker date="1461846357588" expanded="true" signature="507:1092" placeholder="..." />
-            <marker date="1461846357588" expanded="true" signature="524:683" placeholder="..." />
-            <marker date="1461846357588" expanded="true" signature="730:1075" placeholder="..." />
-            <marker date="1461846357588" expanded="true" signature="1133:1277" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="395:441" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="467:1131" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="526:1116" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="543:702" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="754:1099" placeholder="..." />
+            <marker date="1462197945821" expanded="true" signature="1157:1299" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/components/timeLogs/edit-timelog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+            <marker date="1463139756861" expanded="true" signature="328:1033" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="361:584" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="464:573" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="617:836" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="713:825" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="869:1025" placeholder="..." />
+            <marker date="1463139756861" expanded="true" signature="917:1014" placeholder="..." />
           </folding>
         </state>
       </provider>

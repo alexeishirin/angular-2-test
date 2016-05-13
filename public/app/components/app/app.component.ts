@@ -1,13 +1,14 @@
 import {Component, OnInit} from 'angular2/core';
-import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router'
+import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {TimeLogsService, TimeLogsData} from "../../services/timelogs.service";
 
 
-import {AddTimeLogComponent} from '../timeLogs/AddTimeLogComponent'
-import {TimeLogsComponent} from '../timeLogs/TimeLogsComponent'
+import {EditTimeLogComponent} from '../timeLogs/edit-timelog.component'
+import {TimeLogsComponent} from '../timeLogs/timelogs.component'
 
 @RouteConfig([
     {path: '/timeLogs', component: TimeLogsComponent, as: 'TimeLogs', useAsDefault: true},
-    {path: '/add/:id', component: AddTimeLogComponent, as: 'AddTimeLog'},
+    {path: '/add/:id', component: EditTimeLogComponent, as: 'AddTimeLog'},
 ])
 @Component({
     selector: 'my-app',
@@ -22,7 +23,7 @@ import {TimeLogsComponent} from '../timeLogs/TimeLogsComponent'
       <a class="navbar-brand" href="#">Project name</a>
       <div id="navbar">
         <nav class="nav navbar-nav pull-xs-left">
-          <a class="nav-item nav-link" [routerLink]="['TimeLogs']">Tile Logs</a>
+          <a class="nav-item nav-link" [routerLink]="['TimeLogs']">Time Logs <span class="label label-success">{{timeLogs.data.length}}</span></a>
           <a class="nav-item nav-link" [routerLink]="['AddTimeLog', {id:'new'}]">Add Time Log</a>
         </nav>
         <form class="pull-xs-right">
@@ -38,17 +39,20 @@ import {TimeLogsComponent} from '../timeLogs/TimeLogsComponent'
             <li><a href="#" [routerLink]="['AddTimeLog', {id:'new'}]">Add Time Log</a></li>
           </ul>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main animated fadeInRight">
             <router-outlet></router-outlet>
         </div>
     </div>
 </div>
 `,
-    directives: [ROUTER_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES],
+    providers: [TimeLogsService]
 })
 export class AppComponent implements OnInit{
+    timeLogs: TimeLogsData;
 
-    constructor() {
+    constructor(private _timeLogsService: TimeLogsService) {
+        this.timeLogs = _timeLogsService.timeLogs;
         console.log("We are up and running!");
     }
 

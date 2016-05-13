@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from 'angular2/common';
-import {TimeLog} from "../../model/TimeLog";
-import {TimeLogsService} from "../../services/time-logs.service";
+import {TimeLog} from "../../model/timelog.model";
+import {TimeLogsService, TimeLogsData} from "../../services/timelogs.service";
 import {Router} from "angular2/router";
 
 @Component({
@@ -18,7 +18,7 @@ import {Router} from "angular2/router";
                 <th>Time in minutes</th> 
                 <th>Actions</th>
             </tr>
-            <tr *ngFor="#timeLog of timeLogs">
+            <tr *ngFor="#timeLog of timeLogs.data">
                 <th scope="row">{{timeLog.id}}</th> 
                 <td>{{timeLog.description}}</td> 
                 <td>{{formatTime(timeLog.timeInMinutes)}} </td>
@@ -28,30 +28,37 @@ import {Router} from "angular2/router";
         </div>
         <div class="row">
             <span class="col-sm-2 col-md-offset-6">Total:</span>
-            <span class="col-sm-2">{{formatTime(total)}}</span>
+            <span class="col-sm-2">{{showTotalTime()}}</span>
         </div>
     `,
-    directives: [NgClass, NgIf, CORE_DIRECTIVES, FORM_DIRECTIVES],
-    providers: [TimeLogsService]
+    directives: [NgClass, NgIf, CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 
 export class TimeLogsComponent implements OnInit {
-    timeLogs: TimeLog[];
-    total:number;
-    totalLabel:string;
+    timeLogs: TimeLogsData;
 
-    constructor(private _router: Router, private _timeLogsService: TimeLogsService) { }
+    constructor(private _router: Router, private _timeLogsService: TimeLogsService) {
+        this.timeLogs = _timeLogsService.timeLogs;
+    }
 
     ngOnInit () {
         this.getTimeLogs();
     }
 
     getTimeLogs() {
-        this.timeLogs = this._timeLogsService.getTimeLogs();
-        this.total = _.reduce(this.timeLogs, function(summ, timeLog){
-             return summ + timeLog.timeInMinutes;
-        }, 0);
-        console.log(this.total);
+        this._timeLogsService.getTimeLogs();
+            // .subscribe(function(heroes) {return this.timeLogs = heroes});
+        // this.timeLogs = this._timeLogsService.getTimeLogs();
+        // this.total = _.reduce(this.timeLogs, function(summ, timeLog){
+        //      return summ + timeLog.timeInMinutes;
+        // }, 0);
+        // console.log(this.total);
+    }
+    
+    showTotalTime() {
+        return this.formatTime(_.reduce(this.timeLogs.data, function(summ, timeLog){
+                 return summ + timeLog.timeInMinutes;
+            }, 0));
     }
 
     formatTime(timeInMinutes) {
