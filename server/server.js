@@ -3,7 +3,6 @@ var express = require('express');
 var path = require('path');
 var port = 8080;
 var app = express();
-var connect = require('connect');
 var compression = require('compression');
 app.use(compression());
 app.use(express.static(path.resolve(__dirname, '../public/dist')));

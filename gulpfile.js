@@ -73,13 +73,15 @@ gulp.task('sass', function () {
 
 });
 
-gulp.task('styles', ['sass'], function () {
+gulp.task('styles', function () {
     var cssStream = gulp
-        .src('./public/css/**/*.css')
+        .src('./sass/**/*.scss')
         .pipe(sourcemaps.init())
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(concat('style.min.css'))
-        .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./public/dist/css'));
 
     return gulp.src("./public/dist/app.html")

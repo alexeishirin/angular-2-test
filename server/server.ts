@@ -2,7 +2,6 @@ import express = require('express');
 import path = require('path');
 var port: number = 8080;
 var app = express();
-var connect = require('connect');
 var compression = require('compression');
 
 app.use(compression());
