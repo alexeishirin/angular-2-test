@@ -82,4 +82,5 @@ crashlytics-build.properties
 fabric.properties
 
 # Folder of built by gulp items
-/client/dist/
+/client/dist/css/
+/client/dist/js/
