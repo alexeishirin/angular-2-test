@@ -5,10 +5,10 @@ var app = express();
 var compression = require('compression');
 
 app.use(compression());
-app.use(express.static(path.resolve(__dirname, '../public/dist')));
+app.use(express.static(path.resolve(__dirname, '../client/dist')));
 
 var renderIndex = (req: express.Request, res: express.Response) => {
-    res.sendFile(path.resolve(__dirname, '../public/dist/app.html'));
+    res.sendFile(path.resolve(__dirname, '../client/dist/app.html'));
 };
 
 app.get('/api/timelogs', function (req, res) {

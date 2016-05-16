@@ -5,9 +5,9 @@ var port = 8080;
 var app = express();
 var compression = require('compression');
 app.use(compression());
-app.use(express.static(path.resolve(__dirname, '../public/dist')));
+app.use(express.static(path.resolve(__dirname, '../client/dist')));
 var renderIndex = function (req, res) {
-    res.sendFile(path.resolve(__dirname, '../public/dist/app.html'));
+    res.sendFile(path.resolve(__dirname, '../client/dist/app.html'));
 };
 app.get('/api/timelogs', function (req, res) {
     res.json({ data: [

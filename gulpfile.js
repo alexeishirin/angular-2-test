@@ -19,7 +19,7 @@ var BROWSER_SYNC_RELOAD_DELAY = 500;
 gulp.task('default', ['build-server', 'inject-js', 'styles', 'browser-sync'], function () {
     gulp.watch('**/*.ts', ['build-server', 'inject-js', browserSync.reload]);
     gulp.watch('./sass/**/*.scss', ['styles']);
-    gulp.watch('./public/**/*.html', ['bs-reload']);
+    gulp.watch('./client/**/*.html', ['bs-reload']);
 });
 
 gulp.task('build-server', function () {
@@ -31,7 +31,7 @@ gulp.task('build-server', function () {
 });
 
 gulp.task('tslint', function () {
-    return gulp.src('./public/**/*.ts')
+    return gulp.src('./client/**/*.ts')
         .pipe(tslint({
             // contains rules in the tslint.json format
             configuration: "./tslint.json"
@@ -40,22 +40,22 @@ gulp.task('tslint', function () {
 });
 
 gulp.task('build-app', function () {
-    var tsProject = ts.createProject('./public/tsconfig.json');
-    var tsResult = gulp.src('./public/app/**/*.ts')
+    var tsProject = ts.createProject('./client/tsconfig.json');
+    var tsResult = gulp.src('./client/app/**/*.ts')
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject));
     return tsResult.js
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public'))
+        .pipe(gulp.dest('./client'))
 });
 
 gulp.task('bundle-app', ['build-app'], function () {
-    return gulp.src('./public/app/**/*.js')
+    return gulp.src('./client/app/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat('app.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/dist/js'));
+        .pipe(gulp.dest('./client/dist/js'));
 });
 
 gulp.task('bs-reload', function () {
@@ -71,11 +71,11 @@ gulp.task('styles', function () {
         .pipe(cleanCSS())
         .pipe(concat('style.min.css'))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('./public/dist/css'));
+        .pipe(gulp.dest('./client/dist/css'));
 
-    return gulp.src("./public/dist/app.html")
+    return gulp.src("./client/dist/app.html")
         .pipe(inject(cssStream, {relative: true}))
-        .pipe(gulp.dest('./public/dist'))
+        .pipe(gulp.dest('./client/dist'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -111,32 +111,32 @@ gulp.task('nodemon', function (cb) {
 
 gulp.task('bundle-vendor', function () {
     return gulp.src([
-            './public/libs/build/angular2-polyfills.min.js',
-            './public/libs/build/system.js',
-            './public/libs/build/Rx.min.js',
-            './public/libs/build/angular2.min.js',
-            './public/libs/build/http.min.js',
-            './public/libs/build/router.min.js',
-            './public/libs/ng2-bootstrap/ng2-bootstrap.min.js',
-            './public/libs/ng2-bootstrap/ng2-charts.min.js',
-            './public/libs/ng2-material/ng2-material.min.js'
+            './client/libs/build/angular2-polyfills.min.js',
+            './client/libs/build/system.js',
+            './client/libs/build/Rx.min.js',
+            './client/libs/build/angular2.min.js',
+            './client/libs/build/http.min.js',
+            './client/libs/build/router.min.js',
+            './client/libs/ng2-bootstrap/ng2-bootstrap.min.js',
+            './client/libs/ng2-bootstrap/ng2-charts.min.js',
+            './client/libs/ng2-material/ng2-material.min.js'
         ])
         .pipe(concat('vendor.js'))
-        .pipe(gulp.dest('./public/dist/js'));
+        .pipe(gulp.dest('./client/dist/js'));
 });
 
 gulp.task('uglify-app', function () {
-    return gulp.src('./public/dist/js/app.js')
+    return gulp.src('./client/dist/js/app.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./public/dist/minimized'));
+        .pipe(gulp.dest('./client/dist/minimized'));
 });
 
 gulp.task('inject-js', ['build-app', 'bundle-vendor'], function () {
-    var vendorStream = gulp.src(['./public/dist/js/vendor.js'], {read: false});
+    var vendorStream = gulp.src(['./client/dist/js/vendor.js'], {read: false});
 
-    var appStream = gulp.src(['./public/dist/js/app.js'], {read: false});
+    var appStream = gulp.src(['./client/dist/js/app.js'], {read: false});
 
-    return gulp.src("./public/dist/app.html")
+    return gulp.src("./client/dist/app.html")
         .pipe(inject(series(vendorStream, appStream), {relative: true}))
-        .pipe(gulp.dest('./public/dist'));
+        .pipe(gulp.dest('./client/dist'));
 });
