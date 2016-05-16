@@ -4,29 +4,11 @@ import {TimeLogsService} from "../../services/timelogs.service";
 import {Router, RouteParams} from 'angular2/router';
 import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 
+import {htmlTemplate} from './edit-timelog.component.html';
+
 @Component({
     selector: 'add-time-log',
-    template:`<md-progress-linear mode="indeterminate"></md-progress-linear>
-<md-card><form (ngSubmit)="onSubmit()" #timeLogForm="ngForm">
-    <div class="form-group row">
-        <label class="col-sm-2 form-control-label">Description</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" [(ngModel)]="model.description" required>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-sm-2 form-control-label">Time</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" [(ngModel)]="model.timeInMinutes" required >
-        </div>
-    </div>
-    <div class="form-group row">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-secondary">Add Time Log</button>
-        </div>
-    </div>
-</form></md-card>
-`,
+    template: htmlTemplate,
     directives:[MATERIAL_DIRECTIVES]
 })
 
