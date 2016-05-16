@@ -2,11 +2,12 @@ import {Component, OnInit} from 'angular2/core';
 import {TimeLog} from "../../model/timelog.model";
 import {TimeLogsService} from "../../services/timelogs.service";
 import {Router, RouteParams} from 'angular2/router';
+import {MATERIAL_DIRECTIVES} from "ng2-material/all";
 
 @Component({
     selector: 'add-time-log',
-    template:`
-<form (ngSubmit)="onSubmit()" #timeLogForm="ngForm">
+    template:`<md-progress-linear mode="indeterminate"></md-progress-linear>
+<md-card><form (ngSubmit)="onSubmit()" #timeLogForm="ngForm">
     <div class="form-group row">
         <label class="col-sm-2 form-control-label">Description</label>
         <div class="col-sm-10">
@@ -24,8 +25,9 @@ import {Router, RouteParams} from 'angular2/router';
             <button type="submit" class="btn btn-secondary">Add Time Log</button>
         </div>
     </div>
-</form>
-`
+</form></md-card>
+`,
+    directives:[MATERIAL_DIRECTIVES]
 })
 
 export class EditTimeLogComponent implements OnInit {

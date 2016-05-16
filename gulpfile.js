@@ -16,13 +16,13 @@ var series = require('stream-series');
 
 var BROWSER_SYNC_RELOAD_DELAY = 500;
 
-gulp.task('default', ['buildServer', 'inject-js', 'styles', 'browser-sync'], function () {
-    gulp.watch('**/*.ts', ['buildServer', 'inject-js', browserSync.reload]);
-    gulp.watch('./public/**/*.scss', ['styles']);
+gulp.task('default', ['build-server', 'inject-js', 'styles', 'browser-sync'], function () {
+    gulp.watch('**/*.ts', ['build-server', 'inject-js', browserSync.reload]);
+    gulp.watch('./sass/**/*.scss', ['styles']);
     gulp.watch('./public/**/*.html', ['bs-reload']);
 });
 
-gulp.task('buildServer', function () {
+gulp.task('build-server', function () {
     var tsProject = ts.createProject("./server/tsconfig.json");
     return gulp.src('./server/**/*.ts')
         .pipe(ts(tsProject))
@@ -60,17 +60,6 @@ gulp.task('bundle-app', ['build-app'], function () {
 
 gulp.task('bs-reload', function () {
     browserSync.reload();
-});
-
-gulp.task('sass', function () {
-    return gulp
-        .src('./sass/**/*.scss')
-        .pipe(sourcemaps.init())
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./public/css'));
-
 });
 
 gulp.task('styles', function () {
@@ -127,7 +116,10 @@ gulp.task('bundle-vendor', function () {
             './public/libs/build/Rx.min.js',
             './public/libs/build/angular2.min.js',
             './public/libs/build/http.min.js',
-            './public/libs/build/router.min.js'
+            './public/libs/build/router.min.js',
+            './public/libs/ng2-bootstrap/ng2-bootstrap.min.js',
+            './public/libs/ng2-bootstrap/ng2-charts.min.js',
+            './public/libs/ng2-material/ng2-material.min.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('./public/dist/js'));
