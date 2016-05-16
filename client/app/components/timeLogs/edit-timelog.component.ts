@@ -1,15 +1,16 @@
 import {Component, OnInit} from 'angular2/core';
-import {TimeLog} from "../../model/timelog.model";
+import {TimeLog} from "../../../../server/models/timelog.model";
 import {TimeLogsService} from "../../services/timelogs.service";
 import {Router, RouteParams} from 'angular2/router';
 import {MATERIAL_DIRECTIVES} from "ng2-material/all";
+import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from 'angular2/common';
 
 import {htmlTemplate} from './edit-timelog.component.html';
 
 @Component({
     selector: 'add-time-log',
     template: htmlTemplate,
-    directives:[MATERIAL_DIRECTIVES]
+    directives:[CORE_DIRECTIVES, FORM_DIRECTIVES, MATERIAL_DIRECTIVES]
 })
 
 export class EditTimeLogComponent implements OnInit {
@@ -31,7 +32,7 @@ export class EditTimeLogComponent implements OnInit {
             return;
         }
  
-        var timeLogById = this._timeLogsService.getTimeLog(+id);
+        var timeLogById = this._timeLogsService.getTimeLog(id);
         if (timeLogById) {
             this.model = timeLogById;
         }

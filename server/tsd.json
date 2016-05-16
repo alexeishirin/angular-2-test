@@ -19,6 +19,9 @@
     },
     "mime/mime.d.ts": {
       "commit": "310c247694d7f31bd2e3198f71c55221f7c3a3c7"
+    },
+    "mongoose/mongoose.d.ts": {
+      "commit": "398bd742115e2b071ab3edf8b543b6df6fa62dc2"
     }
   }
 }

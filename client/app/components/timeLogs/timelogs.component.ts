@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from 'angular2/common';
-import {TimeLog} from "../../model/timelog.model";
+import {TimeLog} from "../../../../server/models/timelog.model";
 import {TimeLogsService, TimeLogsData} from "../../services/timelogs.service";
 import {Router} from "angular2/router";
 
@@ -59,6 +59,6 @@ export class TimeLogsComponent implements OnInit {
     }
 
     editTimeLog(timeLog) {
-        this._router.navigate( ['AddTimeLog', {id: timeLog.id}] );
+        this._router.navigate( ['AddTimeLog', {id: timeLog._id}] );
     }
 }
