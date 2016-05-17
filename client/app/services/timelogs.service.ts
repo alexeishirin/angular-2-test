@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
 import {TimeLog} from "../../../server/models/timelog.model";
-import {Observable} from "rxjs/Observable";
 import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import * as _ from "lodash";
@@ -28,10 +27,11 @@ export class TimeLogsService {
         // this.timeLogs.timeLogs = [{"id": 1, "description": "Installing Node JS", "timeInMinutes": 5}];
         this.http.get(this._timelogsAPIUrl)
             .map(this.extractData)
-            .subscribe((timeLogs) => {
+            .subscribe(function(timeLogs) {
+                console.log(this.timeLogs);
                 this.timeLogs.data = timeLogs;
                 console.log(this.timeLogs);
-            });
+            }.bind(this));
     }
     
     getTimeLog(id : string) {
@@ -55,8 +55,8 @@ export class TimeLogsService {
         this.http
             .post(this._timelogsAPIUrl, body, { headers: headers })
             .map(this.extractData)
-            .subscribe((timeLogs) => {
-                console.log(this.timeLogs);
+            .subscribe(function (timeLogs) {
+                console.log(timeLogs);
             });;
     }
     
@@ -68,13 +68,15 @@ export class TimeLogsService {
         this.http
             .delete(this._timelogsAPIUrl + '/delete/' + timeLog._id, { headers: headers })
             .map(this.extractData)
-            .subscribe((timeLogs) => {
-                console.log(this.timeLogs);
+            .subscribe(function (timeLogs) {
+                console.log(timeLogs);
             });
     }
     
     private extractData(res: Response) {
-        let body = res.json();
+        console.log("extracting data");
+        console.log(res.json());
+        var body = res.json();
         return body.data || [];
     }
 }

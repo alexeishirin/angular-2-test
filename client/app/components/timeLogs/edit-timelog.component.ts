@@ -3,6 +3,7 @@ import {TimeLog} from "../../../../server/models/timelog.model";
 import {TimeLogsService} from "../../services/timelogs.service";
 import {Router} from '@angular/router';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
+import * as _ from "lodash";
 
 import {htmlTemplate} from './edit-timelog.component.html';
 
@@ -19,14 +20,16 @@ export class EditTimeLogComponent implements OnInit {
     onSubmit() {
         this.submitted = true;
         this._timeLogsService.editTimeLog(this.model);
-        this._router.navigate(['timeLogs']);
+        this._router.navigate(['']);
     }
 
     constructor(private _router:Router, private _timeLogsService:TimeLogsService) {
     }
 
     ngOnInit() {
-        var id = "1";
+        var url = window.location.href;
+        var id = _.last(url.split('/'));
+        console.log(id);
         if (id === 'new') {
             return;
         }

@@ -25,12 +25,6 @@ export class TimeLogsComponent implements OnInit {
 
     getTimeLogs() {
         this._timeLogsService.getTimeLogs();
-            // .subscribe(function(heroes) {return this.timeLogs = heroes});
-        // this.timeLogs = this._timeLogsService.getTimeLogs();
-        // this.total = _.reduce(this.timeLogs, function(summ, timeLog){
-        //      return summ + timeLog.timeInMinutes;
-        // }, 0);
-        // console.log(this.total);
     }
     
     showTotalTime() {
@@ -59,6 +53,6 @@ export class TimeLogsComponent implements OnInit {
     }
 
     editTimeLog(timeLog) {
-        this._router.navigate( ['add/', {id: timeLog._id}] );
+        this._router.navigate( ['add/' + timeLog._id] );
     }
 }

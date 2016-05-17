@@ -12,8 +12,8 @@ export const htmlTemplate = `
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" [routerLink]="['TimeLogs']">Time Logs</a></li>
-            <li><a href="#" [routerLink]="['AddTimeLog', {id:'new'}]">Add Time Log</a></li>
+            <li><a href="#" [routerLink]="['']">Time Logs</a></li>
+            <li><a href="#" [routerLink]="['add/new']">Add Time Log</a></li>
           </ul>
           <form class="navbar-form navbar-right search">
             <input type="text" class="form-control" placeholder="Search...">
@@ -25,8 +25,8 @@ export const htmlTemplate = `
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#" [routerLink]="['TimeLogs']">Time Logs</a></li>
-            <li><a href="#" [routerLink]="['AddTimeLog', {id:'new'}]">Add Time Log</a></li>
+            <li class="active"><a href="#" [routerLink]="['']">Time Logs</a></li>
+            <li><a href="#" [routerLink]="['add/new']">Add Time Log</a></li>
           </ul>
           <div class="btn-group" dropdown [(isOpen)]="status.isopen">
     <button id="single-button" type="button" class="btn btn-primary" dropdownToggle [disabled]="disabled">

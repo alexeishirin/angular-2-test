@@ -10,8 +10,8 @@ import {htmlTemplate} from './app.component.html';
 
 
 @Routes([
-    {path: 'timeLogs', component: TimeLogsComponent, as: 'TimeLogs', useAsDefault: true},
-    {path: 'add/:id', component: EditTimeLogComponent, as: 'AddTimeLog'},
+    {path: '', component: TimeLogsComponent},
+    {path: 'add/:id', component: EditTimeLogComponent},
 ])
 @Component({
     selector: 'my-app',
