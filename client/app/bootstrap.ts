@@ -7,7 +7,7 @@ import {CORE_DIRECTIVES} from 'angular2/common'
 import {ROUTER_BINDINGS, ROUTER_PROVIDERS} from 'angular2/router'
 import { HTTP_PROVIDERS } from 'angular2/http';
 
-import {AppComponent} from './components/app/app.component'
+import {AppComponent} from './components/app/index'
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
     CORE_DIRECTIVES,

@@ -15,7 +15,7 @@ export const htmlTemplate = `
             <li><a href="#" [routerLink]="['TimeLogs']">Time Logs</a></li>
             <li><a href="#" [routerLink]="['AddTimeLog', {id:'new'}]">Add Time Log</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
+          <form class="navbar-form navbar-right search">
             <input type="text" class="form-control" placeholder="Search...">
           </form>
         </div>

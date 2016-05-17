@@ -64,12 +64,15 @@ gulp.task('bs-reload', function () {
 
 gulp.task('styles', function () {
     var cssStream = gulp
-        .src('./sass/**/*.scss')
+        .src([
+            './client/app/components/**/*.scss',
+            './sass/**/*.scss'
+        ])
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(concat('style.min.css'))
+        .pipe(autoprefixer())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./client/dist/css'));
 

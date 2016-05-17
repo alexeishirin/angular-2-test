@@ -11,7 +11,7 @@ export const htmlTemplate = `
                 <th>Actions</th>
             </tr>
             <tr *ngFor="#timeLog of timeLogs.data">
-                <th scope="row">{{timeLog.id}}</th> 
+                <th scope="row">{{timeLog._id}}</th> 
                 <td>{{timeLog.description}}</td> 
                 <td>{{formatTime(timeLog.timeInMinutes)}} </td>
                 <td><span (click)="editTimeLog(timeLog)" class="col-sm-2">Edit</span><span (click)="deleteTimeLog(timeLog)" class="col-sm-2">Delete</span></td>
