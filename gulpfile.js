@@ -13,6 +13,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var tslint = require('gulp-tslint');
 var uglify = require('gulp-uglify');
 var series = require('stream-series');
+var path = require('path');
+var systemBuilder = require('systemjs-builder');
 
 var BROWSER_SYNC_RELOAD_DELAY = 500;
 
@@ -49,13 +51,25 @@ gulp.task('build-app', function () {
         .pipe(gulp.dest('./client'))
 });
 
-gulp.task('bundle-app', ['build-app'], function () {
-    return gulp.src('./client/app/**/*.js')
-        .pipe(sourcemaps.init())
-        .pipe(concat('app.js'))
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./client/dist/js'));
+gulp.task('bundle-app', function () {
+    var builder = new systemBuilder('', './systemjs.config.js');
+    return builder
+        .buildStatic('app/bootstrap.ts', './client/dist/js/app.js', {sourceMaps: true})
+        .then(function() {
+            console.log('Build complete');
+        })
+        .catch(function(err) {
+            console.log('Build error');
+            console.log(err);
+        });
+
+
+    // return gulp.src('./client/app/**/*.js')
+    //     .pipe(sourcemaps.init())
+    //     .pipe(concat('app.js'))
+    //     .pipe(uglify())
+    //     .pipe(sourcemaps.write())
+    //     .pipe(gulp.dest('./client/dist/js'));
 });
 
 gulp.task('bs-reload', function () {
@@ -114,15 +128,9 @@ gulp.task('nodemon', function (cb) {
 
 gulp.task('bundle-vendor', function () {
     return gulp.src([
-            './client/libs/build/angular2-polyfills.min.js',
-            './client/libs/build/system.js',
-            './client/libs/build/Rx.min.js',
-            './client/libs/build/angular2.min.js',
-            './client/libs/build/http.min.js',
-            './client/libs/build/router.min.js',
-            './client/libs/ng2-bootstrap/ng2-bootstrap.min.js',
-            './client/libs/ng2-bootstrap/ng2-charts.min.js',
-            './client/libs/ng2-material/ng2-material.min.js'
+            './node_modules/es6-shim/es6-shim.min.js',
+            './node_modules/zone.js/dist/zone.js',
+            './node_modules/reflect-metadata/Reflect.js'
         ])
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('./client/dist/js'));
@@ -134,7 +142,7 @@ gulp.task('uglify-app', function () {
         .pipe(gulp.dest('./client/dist/minimized'));
 });
 
-gulp.task('inject-js', ['build-app', 'bundle-vendor'], function () {
+gulp.task('inject-js', ['bundle-app', 'bundle-vendor'], function () {
     var vendorStream = gulp.src(['./client/dist/js/vendor.js'], {read: false});
 
     var appStream = gulp.src(['./client/dist/js/app.js'], {read: false});

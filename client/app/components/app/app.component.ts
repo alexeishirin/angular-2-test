@@ -1,5 +1,5 @@
-import {Component, OnInit} from 'angular2/core';
-import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+import {Component, OnInit} from '@angular/core';
+import {Routes, ROUTER_DIRECTIVES} from '@angular/router';
 import {TimeLogsService, TimeLogsData} from "../../services/timelogs.service";
 import {DROPDOWN_DIRECTIVES} from 'ng2-bootstrap/ng2-bootstrap';
 
@@ -9,9 +9,9 @@ import {TimeLogsComponent} from '../timeLogs/timelogs.component';
 import {htmlTemplate} from './app.component.html';
 
 
-@RouteConfig([
-    {path: '/timeLogs', component: TimeLogsComponent, as: 'TimeLogs', useAsDefault: true},
-    {path: '/add/:id', component: EditTimeLogComponent, as: 'AddTimeLog'},
+@Routes([
+    {path: 'timeLogs', component: TimeLogsComponent, as: 'TimeLogs', useAsDefault: true},
+    {path: 'add/:id', component: EditTimeLogComponent, as: 'AddTimeLog'},
 ])
 @Component({
     selector: 'my-app',

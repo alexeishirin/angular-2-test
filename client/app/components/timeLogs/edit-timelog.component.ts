@@ -1,16 +1,15 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, OnInit} from '@angular/core';
 import {TimeLog} from "../../../../server/models/timelog.model";
 import {TimeLogsService} from "../../services/timelogs.service";
-import {Router, RouteParams} from 'angular2/router';
-import {MATERIAL_DIRECTIVES} from "ng2-material/all";
-import {CORE_DIRECTIVES, FORM_DIRECTIVES, NgClass, NgIf} from 'angular2/common';
+import {Router} from '@angular/router';
+import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
 
 import {htmlTemplate} from './edit-timelog.component.html';
 
 @Component({
     selector: 'add-time-log',
     template: htmlTemplate,
-    directives:[CORE_DIRECTIVES, FORM_DIRECTIVES, MATERIAL_DIRECTIVES]
+    directives:[CORE_DIRECTIVES, FORM_DIRECTIVES]
 })
 
 export class EditTimeLogComponent implements OnInit {
@@ -20,14 +19,14 @@ export class EditTimeLogComponent implements OnInit {
     onSubmit() {
         this.submitted = true;
         this._timeLogsService.editTimeLog(this.model);
-        this._router.navigate(['TimeLogs']);
+        this._router.navigate(['timeLogs']);
     }
 
-    constructor(private _routeParams:RouteParams, private _router:Router, private _timeLogsService:TimeLogsService) {
+    constructor(private _router:Router, private _timeLogsService:TimeLogsService) {
     }
 
     ngOnInit() {
-        let id = this._routeParams.get('id');
+        var id = "1";
         if (id === 'new') {
             return;
         }

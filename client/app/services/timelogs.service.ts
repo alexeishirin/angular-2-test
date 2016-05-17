@@ -1,10 +1,11 @@
-import {Injectable} from 'angular2/core';
-import {Http, Response} from 'angular2/http';
+import {Injectable} from '@angular/core';
+import {Http, Response} from '@angular/http';
 import {TimeLog} from "../../../server/models/timelog.model";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 import * as _ from "lodash";
-import { Headers, RequestOptions } from 'angular2/http';
+import { Headers, RequestOptions } from '@angular/http';
 
 export interface TimeLogsData {
     data: TimeLog[];
@@ -45,12 +46,12 @@ export class TimeLogsService {
         } else {
             this.timeLogs.data.push(timeLog);
         }
-
+    
         console.log(timeLog);
         var body = JSON.stringify(timeLog);
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
-
+    
         this.http
             .post(this._timelogsAPIUrl, body, { headers: headers })
             .map(this.extractData)
@@ -71,7 +72,7 @@ export class TimeLogsService {
                 console.log(this.timeLogs);
             });
     }
-
+    
     private extractData(res: Response) {
         let body = res.json();
         return body.data || [];
