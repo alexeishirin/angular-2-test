@@ -15,6 +15,7 @@ var uglify = require('gulp-uglify');
 var series = require('stream-series');
 var path = require('path');
 var systemBuilder = require('systemjs-builder');
+var babel = require('gulp-babel');
 
 var BROWSER_SYNC_RELOAD_DELAY = 500;
 
@@ -51,10 +52,10 @@ gulp.task('build-app', function () {
         .pipe(gulp.dest('./client'))
 });
 
-gulp.task('bundle-app', function () {
+gulp.task('system-js-build', function () {
     var builder = new systemBuilder('', './systemjs.config.js');
     return builder
-        .buildStatic('app/bootstrap.ts', './client/dist/js/app.js', {sourceMaps: true})
+        .buildStatic('app/bootstrap.ts', './client/dist/js/app.js', {mangle: false})
         .then(function() {
             console.log('Build complete');
         })
@@ -62,14 +63,22 @@ gulp.task('bundle-app', function () {
             console.log('Build error');
             console.log(err);
         });
+    
+});
 
-
-    // return gulp.src('./client/app/**/*.js')
-    //     .pipe(sourcemaps.init())
-    //     .pipe(concat('app.js'))
-    //     .pipe(uglify())
-    //     .pipe(sourcemaps.write())
-    //     .pipe(gulp.dest('./client/dist/js'));
+gulp.task('bundle-app', ['system-js-build'], function () {
+    return gulp.src('./client/dist/js/app.js')
+        // .pipe(sourcemaps.init({loadMaps: true}))
+        .pipe(babel({
+            plugins: [
+                'transform-es2015-template-literals'
+            ]
+        }))
+        // .pipe(uglify({mangle: false}).on('error', function(e){
+        //     console.log(e);
+        // }))
+        // .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./client/dist/js'));
 });
 
 gulp.task('bs-reload', function () {
