@@ -1,5 +1,5 @@
 export const htmlTemplate = `
-<md-progress-linear mode="indeterminate"></md-progress-linear>
+<md-progress-circle mode="indeterminate"></md-progress-circle>
 <md-card><form (ngSubmit)="onSubmit()" #timeLogForm="ngForm">
     <div class="form-group row">
         <label class="col-sm-2 form-control-label">Description</label>

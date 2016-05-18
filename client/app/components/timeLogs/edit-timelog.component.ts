@@ -3,6 +3,7 @@ import {TimeLog} from "../../../../server/models/timelog.model";
 import {TimeLogsService} from "../../services/timelogs.service";
 import {Router} from '@angular/router';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
+import {MdProgressCircle} from '@angular2-material/progress-circle';
 import * as _ from "lodash";
 
 import {htmlTemplate} from './edit-timelog.component.html';
@@ -10,7 +11,7 @@ import {htmlTemplate} from './edit-timelog.component.html';
 @Component({
     selector: 'add-time-log',
     template: htmlTemplate,
-    directives:[CORE_DIRECTIVES, FORM_DIRECTIVES]
+    directives:[CORE_DIRECTIVES, FORM_DIRECTIVES, MdProgressCircle]
 })
 
 export class EditTimeLogComponent implements OnInit {
